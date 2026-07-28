@@ -1,0 +1,697 @@
+/* about-us.html — page-specific styles only. Header and footer are in header.css/footer.css. */
+
+/* ==========================================
+   Page Foundation - Desktop
+========================================== */
+
+:root {
+  --ink: #13213c;
+  --muted: #657087;
+  --blue: #1b55dc;
+  --blue-deep: #10358e;
+  --red: #d82d3f;
+  --cream: #f6f3ed;
+  --ice: #edf3ff;
+  --line: #dce2eb;
+  --white: #fff;
+  --shadow: 0 24px 70px rgba(17, 38, 78, .12);
+  --radius: 22px;
+  --shell: min(1160px, calc(100% - 40px));
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:root {
+  --shell: min(1320px, calc(100% - 48px));
+}
+
+/* ==========================================
+   Page Foundation - Mobile
+========================================== */
+
+@media(max-width:720px) {
+  :root {
+    --shell: min(1160px, calc(100% - 28px));
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+@media(max-width:820px) {
+  :root {
+    --shell: min(100% - 30px, 1320px);
+  }
+}
+
+@media(max-width:560px) {
+  :root {
+    --shell: min(100% - 28px, 1320px);
+  }
+}
+
+/* ==========================================
+   Page Banner - Desktop
+========================================== */
+
+.page-banner {
+  width: 100%;
+  overflow: hidden;
+  background: #eef2f8;
+}
+
+.page-banner picture,
+.page-banner img {
+  display: block;
+  width: 100%;
+}
+
+.page-banner img {
+  height: auto;
+}
+
+/* ==========================================
+   Page Banner - Mobile
+========================================== */
+
+@media(max-width:700px) {
+  .page-banner img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ==========================================
+   Section 2 - Desktop
+========================================== */
+
+.shell {
+  width: var(--shell);
+  margin-inline: auto;
+}
+
+.topbar .shell {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .16em;
+  font-size: .75rem !important;
+  font-weight: 800;
+  color: var(--red) !important;
+  margin: 0 0 10px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-heading h2,
+.story-copy h2,
+.split-copy h2,
+.contact-details h2,
+.quote-form h2,
+.sectors-section h2,
+.values-section h2 {
+  font-family: Manrope;
+  font-size: clamp(2rem, 3.4vw, 3.15rem);
+  line-height: 1.12;
+  letter-spacing: -.04em;
+  margin: 0;
+  max-width: 700px;
+}
+
+.story-copy>p:not(.eyebrow),
+.split-copy p {
+  color: var(--muted);
+}
+
+.cta-box p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 0;
+}
+
+.split-copy {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 100px;
+}
+
+.split-copy p:first-child {
+  margin-top: 0;
+}
+
+.service-detail>div>p:not(.eyebrow) {
+  color: var(--muted);
+  max-width: 830px;
+}
+
+.quote-form>div>p:not(.eyebrow) {
+  color: var(--muted);
+  margin-top: 5px;
+}
+
+.catalogue-heading>p:not(.eyebrow) {
+  color: var(--muted);
+  margin: 0;
+  max-width: 650px;
+}
+
+.services-preview .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.sectors-section .shell {
+  position: relative;
+  z-index: 1;
+}
+
+.gem-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-top: 28px;
+  padding: 24px 26px;
+  border: 1px solid #bdd0f4;
+  border-left: 5px solid var(--blue);
+  border-radius: 14px;
+  background: linear-gradient(135deg, #edf3ff, #fff);
+  box-shadow: 0 10px 28px rgba(27, 85, 220, .08);
+}
+
+.gem-icon {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--blue);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  box-shadow: 0 8px 20px rgba(27, 85, 220, .22);
+}
+
+.gem-highlight strong {
+  display: block;
+  color: var(--blue-deep);
+  font-family: Manrope;
+  font-size: 1.14rem;
+  margin: 1px 0 5px;
+}
+
+.gem-highlight p {
+  margin: 0 !important;
+  color: #53617a !important;
+  font-size: .93rem;
+}
+
+.about-anniversary-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(100%, 390px);
+  margin-top: 30px;
+  padding: 14px 20px 14px 14px;
+  border: 1px solid #ded7c9;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff, #f7f1e6);
+  box-shadow: 0 14px 38px rgba(17, 38, 78, .1);
+}
+
+.about-anniversary-badge {
+  display: block;
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  box-shadow: 0 8px 22px rgba(63, 43, 25, .2);
+}
+
+.about-anniversary-card strong,
+.about-anniversary-card span {
+  display: block;
+}
+
+.about-anniversary-card strong {
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.about-anniversary-card span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.water-maintenance-section .shell {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==========================================
+   Section 2 - Mobile
+========================================== */
+
+@media(max-width:960px) {
+  .hero-grid,
+      .split-layout,
+      .split-copy,
+      .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  
+  .split-copy {
+    gap: 30px;
+  }
+  
+  .section {
+    padding: 80px 0;
+  }
+}
+
+@media(max-width:720px) {
+  .topbar .shell span {
+    display: none;
+  }
+  
+  .topbar .shell {
+    justify-content: center;
+  }
+  
+  .section {
+    padding: 65px 0;
+  }
+}
+
+@media(max-width:700px) {
+  .gem-highlight {
+    padding: 20px;
+    gap: 14px;
+  }
+  
+  .gem-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .about-anniversary-card {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 22px;
+    gap: 14px;
+    padding: 12px 16px 12px 12px;
+  }
+
+  .about-anniversary-badge {
+    width: 92px;
+    height: 92px;
+    flex-basis: 92px;
+    border-width: 3px;
+  }
+}
+
+/* ==========================================
+   Vision Section - Desktop
+========================================== */
+
+.vision-section {
+  background: var(--cream);
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.vision-grid article {
+  background: #fff;
+  padding: 44px;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.vision-grid article>span {
+  position: absolute;
+  right: 30px;
+  top: 24px;
+  font-family: Manrope;
+  font-size: 3rem;
+  color: #e7ebf2;
+  font-weight: 800;
+}
+
+.vision-grid h3 {
+  font-family: Manrope;
+  font-size: 1.7rem;
+  margin: 4px 0 12px;
+}
+
+.vision-grid article>p:last-child {
+  color: var(--muted);
+}
+
+.vision-grid article>.vision-icon {
+  position: static;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 22px;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  background: #e8efff;
+  color: var(--blue);
+  font-family: Manrope;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.vision-grid article:nth-child(2)>.vision-icon {
+  background: #ffebed;
+  color: var(--red);
+}
+
+/* ==========================================
+   Vision Section - Mobile
+========================================== */
+
+@media(max-width:720px) {
+  .category-grid,
+      .vision-grid,
+      .feature-grid,
+      .product-grid,
+      .service-grid,
+      .benefit-grid,
+      .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:700px) {
+  .home-service-grid .service-card-icon,
+      .why-icon,
+      .vision-grid article>.vision-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 1.6rem;
+  }
+}
+
+/* ==========================================
+   Why Us Section - Desktop
+========================================== */
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 40px;
+  margin-bottom: 42px;
+}
+
+.section-heading>p {
+  max-width: 420px;
+  color: #b8c6df;
+}
+
+.section-heading.light h2 {
+  color: white;
+}
+
+.services-preview .section-heading {
+  align-items: end;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-grid article {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.feature-grid b {
+  font-size: .73rem;
+  color: var(--red);
+}
+
+.feature-grid h3 {
+  font-family: Manrope;
+  margin: 20px 0 8px;
+}
+
+.feature-grid p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.visual-categories .section-heading {
+  align-items: center;
+}
+
+.visual-categories .section-heading h2 {
+  max-width: 800px;
+  font-size: clamp(2.5rem, 4.8vw, 4.6rem);
+}
+
+.services-preview .section-heading>p {
+  color: #c7d3e8;
+  font-size: 1.02rem;
+}
+
+.why-us-section {
+  background: linear-gradient(180deg, #fff 0%, #f7f9fe 100%);
+}
+
+.why-us-section .section-heading>p {
+  color: var(--muted);
+}
+
+.why-us-grid {
+  gap: 20px;
+}
+
+.why-us-grid article {
+  position: relative;
+  padding: 32px;
+  border: 1px solid #e1e7f1;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: 0 8px 26px rgba(17, 38, 78, .045);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+
+.why-us-grid article:hover {
+  transform: translateY(-5px);
+  border-color: #b9c9ed;
+  box-shadow: 0 18px 42px rgba(17, 38, 78, .11);
+}
+
+.why-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--ice);
+  color: var(--blue);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.why-us-grid article:nth-child(2n) .why-icon {
+  background: #fff0f1;
+  color: var(--red);
+}
+
+.why-us-grid article:nth-child(3n) .why-icon {
+  background: #e7f8f2;
+  color: #14805c;
+}
+
+.why-us-grid h3 {
+  margin: 22px 0 8px;
+}
+
+.why-us-grid p {
+  line-height: 1.65;
+}
+
+.why-icon {
+  width: 64px;
+  height: 64px;
+  font-size: 1.75rem;
+  border-radius: 17px;
+}
+
+.water-benefits .section-heading>p {
+  color: #c8d7e8;
+}
+
+/* ==========================================
+   Why Us Section - Mobile
+========================================== */
+
+@media(max-width:960px) {
+  .feature-grid,
+      .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width:720px) {
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width:650px) {
+  .visual-categories .section-heading h2 br {
+    display: none;
+  }
+}
+
+/* ==========================================
+   Values Section - Desktop
+========================================== */
+
+.values-section {
+  background: var(--ink);
+  color: #fff;
+}
+
+.values-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.values-list span {
+  border: 1px solid #45526b;
+  border-radius: 99px;
+  padding: 11px 20px;
+  color: #dbe3f2;
+}
+
+/* ==========================================
+   Cta Section - Desktop
+========================================== */
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: var(--blue);
+  color: #fff !important;
+  font-weight: 700;
+  padding: 14px 22px;
+  border-radius: 9px;
+  box-shadow: 0 10px 25px rgba(27, 85, 220, .2);
+  transition: transform .2s, background .2s;
+}
+
+.button:hover {
+  background: var(--blue-deep);
+  transform: translateY(-2px);
+}
+
+.cta-box {
+  padding: 54px 60px;
+  background: var(--ice);
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.cta-box h2 {
+  font-family: Manrope;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  letter-spacing: -.04em;
+  line-height: 1.1;
+  margin: 0 0 8px;
+}
+
+/* ==========================================
+   Cta Section - Mobile
+========================================== */
+
+@media(max-width:720px) {
+  .cta-box {
+    padding: 36px 26px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media(max-width:820px) {
+  .mobile-nav .button {
+    margin-top: 8px;
+    padding: 11px 16px;
+  }
+}
