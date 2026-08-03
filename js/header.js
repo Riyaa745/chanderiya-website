@@ -28,6 +28,48 @@ window.updateHeaderCartCount = () => {
 window.updateHeaderCartCount();
 window.addEventListener('cart-updated', window.updateHeaderCartCount);
 
+window.updateHeaderWishlistCount = () => {
+    let count = 0;
+    try { count = JSON.parse(localStorage.getItem('chanderiya-wishlist') || '[]').length; } catch {}
+    document.querySelectorAll('[data-wishlist-count-header]').forEach(element => element.textContent = count);
+};
+window.updateHeaderWishlistCount();
+window.addEventListener('wishlist-updated', window.updateHeaderWishlistCount);
+
+const searchPopup = document.querySelector('[data-search-popup]');
+const searchField = searchPopup?.querySelector('[data-popup-search-input]');
+const searchResults = [...(searchPopup?.querySelectorAll('[data-popup-search-product]') || [])];
+const filterPopupSearch = () => {
+    const query = (searchField?.value || '').trim().toLowerCase();
+    let visible = 0;
+    searchResults.forEach(result => {
+        const match = !query || result.dataset.searchText.toLowerCase().includes(query);
+        result.hidden = !match;
+        if (match) visible += 1;
+    });
+    const empty = searchPopup?.querySelector('[data-popup-search-empty]');
+    if (empty) empty.hidden = visible !== 0;
+};
+const openSearchPopup = () => {
+    if (!searchPopup) return;
+    searchPopup.hidden = false;
+    document.body.classList.add('no-scroll');
+    searchField?.focus();
+    filterPopupSearch();
+};
+const closeSearchPopup = () => {
+    if (!searchPopup) return;
+    searchPopup.hidden = true;
+    document.body.classList.remove('no-scroll');
+};
+document.addEventListener('click', event => {
+    if (event.target.closest('[data-search-open]')) { event.preventDefault(); openSearchPopup(); }
+    if (event.target.closest('[data-search-close]')) closeSearchPopup();
+});
+document.addEventListener('keydown', event => { if (event.key === 'Escape' && searchPopup && !searchPopup.hidden) closeSearchPopup(); });
+searchField?.addEventListener('input', filterPopupSearch);
+searchPopup?.querySelector('[data-popup-search-form]')?.addEventListener('submit', event => event.preventDefault());
+
 /* Header enquiry modal. */
 const headerEnquiryModal = document.querySelector('[data-enquiry-modal]');
 let modalTrigger = null;

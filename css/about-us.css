@@ -618,9 +618,27 @@ button {
 ========================================== */
 
 .values-section {
-  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 92, 112, .24) 0, transparent 34%),
+    linear-gradient(135deg, #0b2f78 0%, #173f91 46%, #b51f3c 100%);
   color: #fff;
 }
+
+.values-section:before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -170px;
+  top: -230px;
+  box-shadow: 0 0 0 75px rgba(255,255,255,.035);
+}
+
+.values-section .shell { position: relative; z-index: 1; }
 
 .values-list {
   display: flex;
@@ -630,10 +648,11 @@ button {
 }
 
 .values-list span {
-  border: 1px solid #45526b;
+  border: 1px solid rgba(255,255,255,.24);
   border-radius: 99px;
   padding: 11px 20px;
-  color: #dbe3f2;
+  background: rgba(255,255,255,.07);
+  color: #fff;
 }
 
 /* ==========================================

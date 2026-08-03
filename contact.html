@@ -2,7 +2,7 @@
   <link rel="stylesheet" href="css/contact.css">\n  <link rel="stylesheet" href="css/contact-extras.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
-  </head><body>
+  <link rel="stylesheet" href="css/search-popup.css"></head><body>
 <div class="topbar">
   <div class="shell topbar-inner">
     <div class="top-social" aria-label="Social media">
@@ -22,9 +22,9 @@
   <div class="mobile-header">
     <a class="mobile-logo" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
     <div class="mobile-header-actions" aria-label="Mobile quick links">
-      <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i></a>
-      <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
-      <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
+      <a class="header-icon wishlist-icon" href="wishlist.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i><span data-wishlist-count-header>0</span></a>
+      <a class="header-icon" href="profile.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
+      <a class="header-icon cart-icon" href="cart.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
     </div>
     <button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="mobile-nav" aria-label="Mobile navigation">
@@ -40,10 +40,10 @@
       <a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
     </nav>
     <div class="header-actions" aria-label="Quick links">
-      <a class="header-icon" href="shop.html" aria-label="Search products" title="Search"><i class="bi bi-search"></i></a>
-      <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i></a>
-      <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
-      <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
+      <a class="header-icon" href="#product-search" data-search-open aria-label="Search products" title="Search"><i class="bi bi-search"></i></a>
+      <a class="header-icon wishlist-icon" href="wishlist.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i><span data-wishlist-count-header>0</span></a>
+      <a class="header-icon" href="profile.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
+      <a class="header-icon cart-icon" href="cart.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
     </div>
     <a class="button button-small nav-cta" href="contact.html#quote">Request a quote</a>
   </div>
@@ -119,4 +119,4 @@
     </nav>
     <span class="footer-integrity">Integrity · Quality · Accountability</span>
   </div>
-</footer><a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a><script src="js/header.js"></script><script src="js/footer.js"></script><script src="js/contact.js"></script></body></html>
+</footer><a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i></a><div class="product-search-popup" id="product-search" data-search-popup hidden><button class="search-popup-backdrop" type="button" data-search-close aria-label="Close search"></button><section class="search-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="search-popup-title"><div class="search-popup-top"><div><p class="eyebrow">Search catalogue</p><h2 id="search-popup-title">Find your product</h2></div><button class="search-popup-close" type="button" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><form class="popup-search-form" role="search" data-popup-search-form><i class="bi bi-search"></i><input type="search" data-popup-search-input placeholder="Search desks, chairs, furniture..." aria-label="Search products"></form><p class="popup-search-label">Products</p><div class="popup-search-results"><a class="popup-search-product" href="product.html?product=desk" data-popup-search-product data-search-text="premium executive desk office workspace furniture"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"><span><small>Furniture</small><b>Premium Executive Desk</b></span><strong>₹14,999</strong></a><a class="popup-search-product" href="product.html?product=chair" data-popup-search-product data-search-text="ergonomic mesh chair seating office furniture"><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair"><span><small>Seating</small><b>Ergonomic Mesh Chair</b></span><strong>₹7,499</strong></a><a class="popup-search-product" href="product.html?product=workstation" data-popup-search-product data-search-text="modular office workstation team furniture"><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation"><span><small>Furniture</small><b>Modular Office Workstation</b></span><strong>₹19,999</strong></a><a class="popup-search-product" href="product.html?product=conference" data-popup-search-product data-search-text="conference room table boardroom meeting furniture"><img src="assets/Conference Room Table.jpg" alt="Conference Room Table"><span><small>Boardroom</small><b>Conference Room Table</b></span><strong>₹26,999</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="abc fire extinguisher fire safety"><img src="assets/ABC Fire Extinguisher.jpg" alt="ABC Fire Extinguisher"><span><small>Fire safety</small><b>ABC Fire Extinguisher</b></span><strong>Enquire</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="commercial ro system water purification"><img src="assets/Commercial RO System.jpg" alt="Commercial RO System"><span><small>Water systems</small><b>Commercial RO System</b></span><strong>Enquire</strong></a></div><div class="popup-search-empty" data-popup-search-empty hidden><i class="bi bi-search"></i><b>No matching products found</b><p>Try another product name or browse the full catalogue.</p></div></section></div><script src="js/header.js"></script><script src="js/footer.js"></script><script src="js/contact.js"></script></body></html>

@@ -65,7 +65,28 @@ document.querySelectorAll('[data-add-item]').forEach(button => button.addEventLi
     }, 1500);
 }));
 
-document.querySelectorAll('.wishlist-button').forEach(button => button.addEventListener('click', () => {
+let homeWishlist = [];
+try { homeWishlist = JSON.parse(localStorage.getItem('chanderiya-wishlist') || '[]'); } catch {}
+document.querySelectorAll('#featured-products .wishlist-button').forEach((button, index) => {
+    const key = featuredProductKeys[index];
+    const setState = () => {
+        const active = homeWishlist.includes(key);
+        button.classList.toggle('active', active);
+        const icon = button.querySelector('i');
+        icon?.classList.toggle('bi-heart', !active);
+        icon?.classList.toggle('bi-heart-fill', active);
+        button.setAttribute('aria-pressed', String(active));
+    };
+    button.addEventListener('click', () => {
+        homeWishlist = homeWishlist.includes(key) ? homeWishlist.filter(item => item !== key) : [...homeWishlist, key];
+        localStorage.setItem('chanderiya-wishlist', JSON.stringify(homeWishlist));
+        window.dispatchEvent(new Event('wishlist-updated'));
+        setState();
+    });
+    setState();
+});
+
+document.querySelectorAll('.wishlist-button:not(#featured-products .wishlist-button)').forEach(button => button.addEventListener('click', () => {
     const active = button.classList.toggle('active');
     const icon = button.querySelector('i');
     icon?.classList.toggle('bi-heart', !active);

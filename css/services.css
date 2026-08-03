@@ -545,10 +545,26 @@ button {
 }
 
 .water-benefits {
-  background: linear-gradient(135deg, #0b1730, #102e50);
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 92, 112, .24) 0, transparent 34%),
+    linear-gradient(135deg, #0b2f78 0%, #173f91 46%, #b51f3c 100%);
   position: relative;
   overflow: hidden;
 }
+
+.water-benefits:before {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50%;
+  right: -170px;
+  top: -230px;
+  box-shadow: 0 0 0 75px rgba(255,255,255,.035);
+}
+
+.water-benefits .shell { position: relative; z-index: 1; }
 
 .water-benefits .section-heading>p {
   color: #c8d7e8;

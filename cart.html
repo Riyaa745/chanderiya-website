@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Review products in your Chanderiya inquiry cart.">
+  <title>Your Cart | Chanderiya Marketing &amp; Sales</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="css/gradient-page-theme.css"></head>
+<body>
+  <header class="site-header">
+    <div class="mobile-header"><a class="mobile-logo" href="index.html"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a><div class="mobile-header-actions"><a class="header-icon" href="shop.html" aria-label="Wishlist"><i class="bi bi-heart"></i></a><a class="header-icon cart-icon active" href="cart.html" aria-label="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a></div><button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="mobile-nav"><a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a><a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav></div>
+    <div class="shell nav-wrap"><a class="brand" href="index.html"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a><nav class="main-nav"><a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a><a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav><div class="header-actions"><a class="header-icon" href="shop.html" aria-label="Search"><i class="bi bi-search"></i></a><a class="header-icon" href="shop.html" aria-label="Wishlist"><i class="bi bi-heart"></i></a><a class="header-icon" href="contact.html" aria-label="Contact"><i class="bi bi-person"></i></a><a class="header-icon cart-icon active" href="cart.html" aria-label="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a></div><a class="button button-small nav-cta" href="contact.html#quote">Request a quote</a></div>
+  </header>
+
+  <main class="cart-page">
+    <section class="cart-hero"><div class="shell"><nav class="cart-breadcrumb"><a href="index.html">Home</a><span>/</span><span>Your cart</span></nav><p class="eyebrow">Your selections</p><h1>Shopping cart</h1><p>Review quantities and send your order request securely to our team.</p></div></section>
+
+    <section class="cart-area"><div class="shell">
+      <div class="empty-cart" data-empty-cart hidden>
+        <div class="empty-cart-icon"><i class="bi bi-cart-x"></i></div><p class="eyebrow">Your cart is empty</p><h2>Nothing here yet.</h2><p>Explore our catalogue and add products you would like to order or enquire about.</p><div class="empty-actions"><a class="cart-primary-button" href="shop.html"><i class="bi bi-grid"></i> Browse products</a><a class="cart-secondary-button" href="custom-products.html">Explore custom products</a></div>
+        <div class="empty-benefits"><span><i class="bi bi-shield-check"></i> Quality checked</span><span><i class="bi bi-headset"></i> Expert assistance</span><span><i class="bi bi-truck"></i> Delivery support</span></div>
+      </div>
+
+      <div class="filled-cart" data-filled-cart hidden>
+        <div class="cart-layout">
+          <section class="cart-items" aria-labelledby="cart-items-title"><div class="cart-section-heading"><div><p class="eyebrow">Selected products</p><h2 id="cart-items-title">Your cart <span data-cart-items-label>(0 items)</span></h2></div><button type="button" data-clear-cart>Clear cart</button></div>
+            <article class="cart-item" data-cart-product="desk" hidden><a class="cart-product-image" href="product.html?product=desk"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"></a><div class="cart-product-copy"><span>Furniture · Workspace</span><h3><a href="product.html?product=desk">Premium Executive Desk</a></h3><small>SKU: CMS-FUR-001</small><button class="remove-item" type="button" data-remove-cart="desk"><i class="bi bi-trash3"></i> Remove</button></div><div class="cart-item-controls"><strong data-unit-price="14999">₹14,999</strong><div class="cart-quantity"><button type="button" data-cart-minus="desk" aria-label="Reduce quantity">−</button><input value="1" min="1" type="number" data-cart-quantity="desk" aria-label="Desk quantity"><button type="button" data-cart-plus="desk" aria-label="Increase quantity">+</button></div><b data-line-total="desk">₹14,999</b></div></article>
+            <article class="cart-item" data-cart-product="chair" hidden><a class="cart-product-image" href="product.html?product=chair"><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair"></a><div class="cart-product-copy"><span>Furniture · Seating</span><h3><a href="product.html?product=chair">Ergonomic Mesh Chair</a></h3><small>SKU: CMS-CHR-002</small><button class="remove-item" type="button" data-remove-cart="chair"><i class="bi bi-trash3"></i> Remove</button></div><div class="cart-item-controls"><strong data-unit-price="7499">₹7,499</strong><div class="cart-quantity"><button type="button" data-cart-minus="chair">−</button><input value="1" min="1" type="number" data-cart-quantity="chair"><button type="button" data-cart-plus="chair">+</button></div><b data-line-total="chair">₹7,499</b></div></article>
+            <article class="cart-item" data-cart-product="workstation" hidden><a class="cart-product-image" href="product.html?product=workstation"><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation"></a><div class="cart-product-copy"><span>Furniture · Modular</span><h3><a href="product.html?product=workstation">Modular Office Workstation</a></h3><small>SKU: CMS-FUR-003</small><button class="remove-item" type="button" data-remove-cart="workstation"><i class="bi bi-trash3"></i> Remove</button></div><div class="cart-item-controls"><strong data-unit-price="19999">₹19,999</strong><div class="cart-quantity"><button type="button" data-cart-minus="workstation">−</button><input value="1" min="1" type="number" data-cart-quantity="workstation"><button type="button" data-cart-plus="workstation">+</button></div><b data-line-total="workstation">₹19,999</b></div></article>
+            <article class="cart-item" data-cart-product="conference" hidden><a class="cart-product-image" href="product.html?product=conference"><img src="assets/Conference Room Table.jpg" alt="Conference Room Table"></a><div class="cart-product-copy"><span>Furniture · Boardroom</span><h3><a href="product.html?product=conference">Conference Room Table</a></h3><small>SKU: CMS-FUR-004</small><button class="remove-item" type="button" data-remove-cart="conference"><i class="bi bi-trash3"></i> Remove</button></div><div class="cart-item-controls"><strong data-unit-price="26999">₹26,999</strong><div class="cart-quantity"><button type="button" data-cart-minus="conference">−</button><input value="1" min="1" type="number" data-cart-quantity="conference"><button type="button" data-cart-plus="conference">+</button></div><b data-line-total="conference">₹26,999</b></div></article>
+            <a class="continue-shopping" href="shop.html"><i class="bi bi-arrow-left"></i> Continue shopping</a>
+          </section>
+
+          <aside class="order-summary"><p class="eyebrow">Order details</p><h2>Cart summary</h2><div class="summary-row"><span>Subtotal</span><strong data-cart-subtotal>₹0</strong></div><div class="summary-row shipping-row"><span>Shipping charge</span><strong data-shipping-charge>₹499</strong></div><div class="summary-row"><span>Taxes</span><b>Calculated at checkout</b></div><div class="summary-total"><span>Estimated total</span><strong data-cart-total>₹0</strong></div><p class="summary-note"><i class="bi bi-info-circle"></i> Final taxes and delivery availability are confirmed during checkout.</p><a class="checkout-button" href="checkout.html"><i class="bi bi-lock"></i> Proceed to checkout</a><div class="secure-note"><i class="bi bi-shield-lock"></i><span><b>Secure assisted checkout</b><small>Your order details can be confirmed before payment.</small></span></div></aside>
+        </div>
+        <div class="cart-trust"><span><i class="bi bi-patch-check"></i><b>Verified products</b><small>Quality-checked sourcing</small></span><span><i class="bi bi-arrow-repeat"></i><b>Easy assistance</b><small>Help with order changes</small></span><span><i class="bi bi-truck"></i><b>Delivery support</b><small>Across supported locations</small></span><span><i class="bi bi-headset"></i><b>Talk to a person</b><small>Responsive sales support</small></span></div>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-bottom footer-bottom-with-legal"><span>© <span data-year></span> Chanderiya Marketing &amp; Sales.</span><nav class="footer-legal-row"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms &amp; Conditions</a><a href="shipping.html">Shipping Policy</a><a href="refund.html">Cancellation &amp; Refund</a></nav><span class="footer-integrity">Integrity · Quality · Accountability</span></div></footer>
+  <a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+  <script src="js/header.js"></script><script src="js/footer.js"></script><script src="js/cart.js"></script>
+</body>
+</html>

@@ -74,6 +74,7 @@ const updateWishlistButton = () => {
 wishlistButton?.addEventListener('click', () => {
     wishlist = wishlist.includes(productKey) ? wishlist.filter(key => key !== productKey) : [...wishlist, productKey];
     localStorage.setItem(wishlistKey, JSON.stringify(wishlist));
+    window.dispatchEvent(new Event('wishlist-updated'));
     updateWishlistButton();
 });
 updateWishlistButton();

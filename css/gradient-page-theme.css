@@ -1,0 +1,9 @@
+/* Gradient is intentionally limited to page heading/hero areas. */
+.cart-hero,.wishlist-hero,body:has(.legal-content) .page-hero{position:relative;overflow:hidden;background:radial-gradient(circle at 88% 12%,rgba(255,92,112,.25) 0,transparent 34%),linear-gradient(135deg,#0b2f78 0%,#173f91 46%,#b51f3c 100%);color:#fff}
+.cart-hero:before,.wishlist-hero:before,body:has(.legal-content) .page-hero:before{content:"";position:absolute;width:430px;height:430px;right:-170px;top:-230px;border:1px solid rgba(255,255,255,.13);border-radius:50%;box-shadow:0 0 0 75px rgba(255,255,255,.035);pointer-events:none}
+.cart-hero>.shell,.wishlist-hero>.shell,body:has(.legal-content) .page-hero>.shell{position:relative;z-index:1}
+.cart-hero h1,.wishlist-hero h1,body:has(.legal-content) .page-hero h1{color:#fff}
+.cart-hero nav,.cart-hero nav a,.wishlist-hero nav,.wishlist-hero nav a{color:#fff}
+.cart-hero>div>p:last-child,.wishlist-hero>div>p:last-child,body:has(.legal-content) .page-hero p{color:#dbe5f6}
+.cart-hero .eyebrow,.wishlist-hero .eyebrow,body:has(.legal-content) .page-hero .eyebrow{color:#ffb5be!important}
+@media(max-width:720px){.cart-hero:before,.wishlist-hero:before,body:has(.legal-content) .page-hero:before{width:320px;height:320px;right:-160px;top:-150px}}
