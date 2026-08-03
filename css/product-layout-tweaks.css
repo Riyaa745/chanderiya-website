@@ -1,0 +1,12 @@
+/* Cleaner product layout: no outer card around the main product. */
+.product-detail{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
+
+/* Product copy stays readable without appearing inside a separate box. */
+.product-detail-copy{padding:20px 0}
+
+/* Description remains open while Specifications gets its own raised card. */
+.normal-product-details{align-items:start;padding:0;border:0;border-radius:0;background:transparent}
+.normal-product-details>div:first-child{padding:28px 10px 28px 0}
+.normal-product-details>div:last-child{padding:30px;border:0;border-radius:16px;background:#fff;box-shadow:0 14px 38px rgba(19,33,60,.12)}
+
+@media(max-width:700px){.product-detail{padding:0}.product-detail-copy{padding:10px 0}.normal-product-details>div:first-child{padding:10px 0}.normal-product-details>div:last-child{padding:24px}}

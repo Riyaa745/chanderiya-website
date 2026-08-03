@@ -129,6 +129,151 @@ button {
   margin-bottom: 34px;
 }
 
+.catalogue-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 28px;
+}
+
+.catalogue-toolbar h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.product-filters {
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.product-filters label {
+  display: grid;
+  gap: 6px;
+  color: var(--ink);
+  font-size: .83rem;
+  font-weight: 700;
+}
+
+.product-filters select {
+  min-width: 176px;
+  height: 46px;
+  padding: 0 42px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.price-range {
+  position: relative;
+  width: 176px;
+  margin: 0;
+}
+
+.price-range summary {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46px;
+  padding: 0 42px 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+  font-size: .83rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.price-range summary::-webkit-details-marker {
+  display: none;
+}
+
+.price-range summary::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-65%) rotate(45deg);
+}
+
+.price-range[open] summary::after {
+  transform: translateY(-35%) rotate(225deg);
+}
+
+.price-range-fields {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 8px);
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 294px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(17, 38, 78, .15);
+}
+
+.price-range-fields label {
+  font-size: .73rem;
+  color: var(--muted);
+}
+
+.price-range-fields input {
+  width: 100%;
+  height: 46px;
+  margin-top: 3px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  color: var(--ink);
+}
+
+.filter-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-button,
+.clear-button {
+  height: 46px;
+  padding: 0 17px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.filter-button {
+  border: 1px solid var(--blue);
+  background: var(--blue);
+  color: #fff;
+}
+
+.clear-button {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink);
+}
+
+.filter-summary {
+  margin: 16px 0 20px;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
 .filter-bar button {
   border: 1px solid var(--line);
   background: #fff;
@@ -146,7 +291,7 @@ button {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -165,6 +310,138 @@ button {
 
 .product-card.hidden {
   display: none;
+}
+
+/* Product card design shared with the Home page catalogue. */
+.product-card {
+  position: relative;
+  border: 0;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(17, 38, 78, .08);
+}
+
+.product-card:hover {
+  box-shadow: 0 22px 55px rgba(17, 38, 78, .13);
+}
+
+.product-art {
+  height: 245px;
+  padding: 0;
+  background-color: var(--ice);
+  background-size: cover;
+  background-position: center;
+}
+
+.product-art span {
+  display: none;
+}
+
+.product-art:before {
+  content: "Save 15%";
+  width: auto;
+  height: auto;
+  left: 14px;
+  right: auto;
+  top: 14px;
+  bottom: auto;
+  padding: 7px 11px;
+  border-radius: 8px;
+  background: var(--red);
+  color: #fff;
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  box-shadow: 0 5px 14px rgba(216, 45, 63, .22);
+  z-index: 2;
+}
+
+.product-art:after {
+  content: "♡";
+  width: 42px;
+  height: 42px;
+  right: 14px;
+  left: auto;
+  top: 14px;
+  bottom: auto;
+  padding-top: 4px;
+  border-radius: 22px;
+  background: #fff;
+  color: #173458;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(17, 38, 78, .12);
+  z-index: 2;
+}
+
+.art-desk { background-image: url('../assets/Premium Executive Desk.jpg'); }
+.art-workstation { background-image: url('../assets/modular-office-workstation.jpg'); }
+.art-chair { background-image: url('../assets/Ergonomic Mesh Chair.jpg'); }
+.art-storage, .art-conference { background-image: url('../assets/Conference Room Table.jpg'); }
+.art-school { background-image: url('../assets/furniture-workspace-category.png'); }
+.art-hospital, .art-medical { background-image: url('../assets/institutional-furniture.png'); }
+.fire-art { background-image: url('../assets/ABC Fire Extinguisher.jpg'); }
+.ppe-art { background-image: url('../assets/certified fire-fighting.png'); }
+.art-water { background-image: url('../assets/Commercial RO System.jpg'); }
+.art-filter { background-image: url('../assets/water-purification-category.png'); }
+
+.product-body {
+  min-height: 205px;
+  padding: 22px 24px 62px;
+}
+
+.product-body h3 {
+  font-size: 1.18rem;
+  line-height: 1.3;
+  margin: 9px 0 0;
+}
+
+.product-body p {
+  display: none;
+}
+
+.product-body::after {
+  content: "Add to inquiry cart";
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  left: 24px;
+  display: grid;
+  height: 46px;
+  place-items: center;
+  border-radius: 9px;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+}
+
+.product-card::after {
+  content: "₹" attr(data-price);
+  position: absolute;
+  left: 24px;
+  bottom: 78px;
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.product-card::before {
+  content: "\f341";
+  position: absolute;
+  z-index: 3;
+  top: 64px;
+  right: 14px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: #173458;
+  font-family: "bootstrap-icons";
+  font-size: 17px;
+  box-shadow: 0 4px 14px rgba(17, 38, 78, .12);
 }
 
 .product-art {
@@ -389,6 +666,30 @@ button {
   .product-body p {
     min-height: 0;
   }
+
+  .product-art {
+    height: 220px;
+  }
+
+  .catalogue-toolbar,
+  .product-filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .product-filters select {
+    width: 100%;
+  }
+
+  .price-range {
+    width: 100%;
+  }
+
+  .price-range-fields {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
 }
 
 @media(max-width:760px) {
@@ -505,3 +806,17 @@ button {
     padding: 11px 16px;
   }
 }
+
+/* Keep the catalogue cards visually aligned with the Home page cards. */
+.product-grid .product-art:before { content: "Save 15%"; display: block; width: auto; height: auto; left: 14px; right: auto; top: 14px; bottom: auto; padding: 7px 11px; border-radius: 8px; background: var(--red); color: #fff; font-size: .76rem; font-weight: 800; letter-spacing: .02em; box-shadow: 0 5px 14px rgba(216, 45, 63, .22); z-index: 2; }
+.product-grid .product-art:after { content: "♡"; display: grid; width: 42px; height: 42px; right: 14px; left: auto; top: 14px; bottom: auto; padding: 0; place-items: center; border-radius: 50%; background: #fff; color: #173458; font-size: 24px; line-height: 1; text-align: center; box-shadow: 0 4px 14px rgba(17, 38, 78, .12); z-index: 2; }
+.product-grid .art-desk { background-image: url('../assets/Premium Executive Desk.jpg'); }
+.product-grid .art-workstation { background-image: url('../assets/modular-office-workstation.jpg'); }
+.product-grid .art-chair { background-image: url('../assets/Ergonomic Mesh Chair.jpg'); }
+.product-grid .art-storage, .product-grid .art-conference { background-image: url('../assets/Conference Room Table.jpg'); }
+.product-grid .art-school { background-image: url('../assets/furniture-workspace-category.png'); }
+.product-grid .art-hospital, .product-grid .art-medical { background-image: url('../assets/institutional-furniture.png'); }
+.product-grid .fire-art { background-image: url('../assets/ABC Fire Extinguisher.jpg'); }
+.product-grid .ppe-art { background-image: url('../assets/certified fire-fighting.png'); }
+.product-grid .art-water { background-image: url('../assets/Commercial RO System.jpg'); }
+.product-grid .art-filter { background-image: url('../assets/water-purification-category.png'); }

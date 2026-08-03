@@ -28,18 +28,25 @@ if (slider) {
 /* ==========================================
    Customer Logo Marquee
 ========================================== */
-const customerLogoTrack = document.querySelector('.customer-logo-track');
-const customerLogoGroup = customerLogoTrack?.querySelector('.customer-logo-group');
-if (customerLogoTrack && customerLogoGroup) {
-    const duplicateGroup = customerLogoGroup.cloneNode(true);
-    duplicateGroup.setAttribute('aria-hidden', 'true');
-    duplicateGroup.querySelectorAll('img').forEach(image => image.alt = '');
-    customerLogoTrack.appendChild(duplicateGroup);
-}
-
 /* ==========================================
    Featured Products - Wishlist and Cart
 ========================================== */
+const featuredProductKeys = ['desk', 'chair', 'workstation', 'conference'];
+document.querySelectorAll('#featured-products .commerce-card').forEach((card, index) => {
+    const destination = `product.html?product=${featuredProductKeys[index]}`;
+    card.querySelectorAll('a[href]').forEach(link => {
+        link.href = destination;
+    });
+    card.tabIndex = 0;
+    card.setAttribute('role', 'link');
+    card.addEventListener('click', event => {
+        if (!event.target.closest('a, button')) location.href = destination;
+    });
+    card.addEventListener('keydown', event => {
+        if (event.key === 'Enter' && !event.target.closest('a, button')) location.href = destination;
+    });
+});
+
 const cartStorageKey = 'chanderiya-inquiry';
 let homeCart = [];
 try { homeCart = JSON.parse(localStorage.getItem(cartStorageKey) || '[]'); } catch {}

@@ -1,5 +1,6 @@
 /* Shared header navigation only. */
 const currentPage = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
 document.querySelectorAll('.main-nav a,.mobile-nav a').forEach(link => {
     const target = (link.getAttribute('href') || '').split('#')[0].toLowerCase();
     link.classList.toggle('active', target === currentPage);

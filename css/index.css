@@ -1208,6 +1208,8 @@ button {
 /* ==========================================
    Featured Products - Desktop
 ========================================== */
+#featured-products .commerce-card[role="link"] { cursor: pointer; }
+#featured-products .commerce-card[role="link"]:focus-visible { outline: 3px solid #1b55dc; outline-offset: 4px; }
 
 .featured-products {
   background: #fff;

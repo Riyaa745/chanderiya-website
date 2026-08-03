@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,128 +8,243 @@
   <title>Premium Executive Desk | Chanderiya Marketing & Sales</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="css/product-commerce.css">
+  <link rel="stylesheet" href="css/product-wishlist.css">
+  <link rel="stylesheet" href="css/product-layout-tweaks.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
-  </head>
+</head>
+
 <body>
   <div class="topbar">
-  <div class="shell topbar-inner">
-    <div class="top-social" aria-label="Social media">
-      <a href="https://www.facebook.com/chanderiyaMS" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-      <a href="https://in.linkedin.com/company/chanderiya-marketing-and-sales" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-      <a href="https://www.youtube.com/@cmschanderiya" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-    </div>
-    <span class="top-message">Serving institutions with trust since 2011</span>
-    <div class="top-links">
-      <a href="tel:+919027398484"><i class="bi bi-telephone"></i><span>+91 90273 98484</span></a>
-      <a href="tel:+919319038666"><i class="bi bi-telephone"></i><span>+91 93190 38666</span></a>
-      <a href="mailto:chanderiya.group@gmail.com"><i class="bi bi-envelope"></i><span>chanderiya.group@gmail.com</span></a>
-    </div>
-  </div>
-</div>
-<header class="site-header">
-  <div class="mobile-header">
-    <a class="mobile-logo" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
-    <div class="mobile-header-actions" aria-label="Mobile quick links">
-      <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i></a>
-      <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
-      <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
-    </div>
-    <button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a>
-      <a href="services.html">Services</a><a href="contact.html">Contact</a>
-      <a class="button button-small" href="contact.html#quote">Request a quote</a>
-    </nav>
-  </div>
-  <div class="shell nav-wrap">
-    <a class="brand" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
-    <nav class="main-nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a>
-      <a href="services.html">Services</a><a href="contact.html">Contact</a>
-    </nav>
-    <div class="header-actions" aria-label="Quick links">
-      <a class="header-icon" href="shop.html" aria-label="Search products" title="Search"><i class="bi bi-search"></i></a>
-      <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i></a>
-      <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i class="bi bi-person"></i></a>
-      <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i class="bi bi-cart3"></i><span data-cart-count>0</span></a>
-    </div>
-    <a class="button button-small nav-cta" href="contact.html#quote">Request a quote</a>
-  </div>
-  <div class="enquiry-modal" data-enquiry-modal aria-hidden="true">
-    <button class="enquiry-backdrop" type="button" data-enquiry-close aria-label="Close quote form"></button>
-    <div class="enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
-      <button class="modal-close" type="button" data-enquiry-close aria-label="Close quote form"><i
-          class="bi bi-x-lg" aria-hidden="true"></i></button>
-      <p class="eyebrow">Tell us your requirement</p>
-      <h2 id="enquiry-title">Request a quote</h2>
-      <p>Share a few details and our team will respond with a suitable solution.</p>
-      <form data-header-quote-form>
-        <div class="form-row">
-          <label>Name<input type="text" name="name" required autocomplete="name"></label>
-          <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
-        </div>
-        <div class="form-row">
-          <label>Organization<input type="text" name="organization" autocomplete="organization"></label>
-          <label>Location<input type="text" name="location" autocomplete="address-level2"></label>
-        </div>
-        <label>Interested in<select name="interest" required>
-            <option value="">Select a solution</option>
-            <option>Furniture & Workspaces</option>
-            <option>Fire Safety</option>
-            <option>Water Purification</option>
-            <option>Institutional Infrastructure</option>
-            <option>Repair & Maintenance</option>
-          </select></label>
-        <label>Requirement<textarea name="message" rows="4" required
-            placeholder="Product, quantity, specifications or service details"></textarea></label>
-        <button class="button" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i> Send request on
-          WhatsApp</button>
-      </form>
-    </div>
-  </div>
-</header>
-  <main><section class="section product-detail-section"><div class="shell"><nav class="detail-breadcrumb"><a href="index.html">Home</a> / <a href="shop.html">Products</a> / <span>Premium Executive Desk</span></nav><article class="product-detail"><div class="product-detail-image"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"></div><div class="product-detail-copy"><p class="eyebrow">Furniture · Workspace</p><h1>Premium Executive Desk</h1><p>Built for dependable everyday use in commercial and institutional environments. Contact our team for available specifications, quantities, delivery and installation support.</p><div class="price-row"><strong>₹14,999</strong><del>₹18,999</del></div><small class="starting-label">Indicative starting price</small><div class="product-detail-actions"><a class="button" href="contact.html#quote">Request quotation</a><a class="button button-outline" href="shop.html">Back to products</a></div></div></article></div></section></main>
-  <footer class="site-footer">
-  <div class="shell footer-grid">
-    <div class="footer-brand">
-      <a class="brand brand-footer" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
-      <p>Reliable institutional products and services from Haridwar, Uttarakhand.</p>
-      <div class="footer-social">
-        <a href="https://www.facebook.com/chanderiyaMS" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://in.linkedin.com/company/chanderiya-marketing-and-sales" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://www.youtube.com/@cmschanderiya" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="https://wa.me/919027398484" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <div class="shell topbar-inner">
+      <div class="top-social" aria-label="Social media">
+        <a href="https://www.facebook.com/chanderiyaMS" target="_blank" rel="noopener" aria-label="Facebook"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://in.linkedin.com/company/chanderiya-marketing-and-sales" target="_blank" rel="noopener"
+          aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.youtube.com/@cmschanderiya" target="_blank" rel="noopener" aria-label="YouTube"><i
+            class="bi bi-youtube"></i></a>
+      </div>
+      <span class="top-message">Serving institutions with trust since 2011</span>
+      <div class="top-links">
+        <a href="tel:+919027398484"><i class="bi bi-telephone"></i><span>+91 90273 98484</span></a>
+        <a href="tel:+919319038666"><i class="bi bi-telephone"></i><span>+91 93190 38666</span></a>
+        <a href="mailto:chanderiya.group@gmail.com"><i
+            class="bi bi-envelope"></i><span>chanderiya.group@gmail.com</span></a>
       </div>
     </div>
-    <div>
-      <h4>Navigate</h4><a href="about-us.html">About us</a><a href="shop.html">Products</a>
-      <a href="services.html">Services</a><a href="contact.html">Contact</a>
-    </div>
-    <div>
-      <h4>Solutions</h4><a href="shop.html#furniture">Furniture</a><a href="shop.html#fire">Fire safety</a>
-      <a href="shop.html#water">Water purification</a><a href="shop.html#institutional">Institutional</a>
-    </div>
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <a href="tel:+919027398484"><i class="bi bi-telephone"></i><span>+91 90273 98484</span></a>
-      <a href="mailto:chanderiya.group@gmail.com"><i class="bi bi-envelope"></i><span>chanderiya.group@gmail.com</span></a>
-      <p><i class="bi bi-geo-alt"></i><span>170, First Floor, Brahampuri, Haridwar, Uttarakhand 249401</span></p>
-    </div>
   </div>
-  <div class="shell footer-bottom footer-bottom-with-legal">
-    <span>© <span data-year></span> Chanderiya Marketing & Sales.</span>
-    <nav class="footer-legal-row" aria-label="Legal links">
-      <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a>
-      <a href="shipping.html">Shipping Policy</a><a href="refund.html">Cancellation & Refund</a>
-    </nav>
-    <span class="footer-integrity">Integrity · Quality · Accountability</span>
-  </div>
-</footer>
-  <a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
-  
-<script src="js/header.js"></script><script src="js/footer.js"></script></body>
+  <header class="site-header">
+    <div class="mobile-header">
+      <a class="mobile-logo" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg"
+          alt="Chanderiya Marketing and Sales"></a>
+      <div class="mobile-header-actions" aria-label="Mobile quick links">
+        <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i
+            class="bi bi-heart"></i></a>
+        <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i
+            class="bi bi-person"></i></a>
+        <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i
+            class="bi bi-cart3"></i><span data-cart-count>0</span></a>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-label="Open navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="mobile-nav" aria-label="Mobile navigation">
+        <a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a>
+        <a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+        <a class="button button-small" href="contact.html#quote">Request a quote</a>
+      </nav>
+    </div>
+    <div class="shell nav-wrap">
+      <a class="brand" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg"
+          alt="Chanderiya Marketing and Sales"></a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Products</a>
+        <a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions" aria-label="Quick links">
+        <a class="header-icon" href="shop.html" aria-label="Search products" title="Search"><i
+            class="bi bi-search"></i></a>
+        <a class="header-icon" href="shop.html" aria-label="View wishlist" title="Wishlist"><i
+            class="bi bi-heart"></i></a>
+        <a class="header-icon" href="contact.html" aria-label="Profile and contact" title="Profile"><i
+            class="bi bi-person"></i></a>
+        <a class="header-icon cart-icon" href="shop.html" aria-label="View inquiry cart" title="Cart"><i
+            class="bi bi-cart3"></i><span data-cart-count>0</span></a>
+      </div>
+      <a class="button button-small nav-cta" href="contact.html#quote">Request a quote</a>
+    </div>
+    <div class="enquiry-modal" data-enquiry-modal aria-hidden="true">
+      <button class="enquiry-backdrop" type="button" data-enquiry-close aria-label="Close quote form"></button>
+      <div class="enquiry-dialog" role="dialog" aria-modal="true" aria-labelledby="enquiry-title">
+        <button class="modal-close" type="button" data-enquiry-close aria-label="Close quote form"><i class="bi bi-x-lg"
+            aria-hidden="true"></i></button>
+        <p class="eyebrow">Tell us your requirement</p>
+        <h2 id="enquiry-title">Request a quote</h2>
+        <p>Share a few details and our team will respond with a suitable solution.</p>
+        <form data-header-quote-form>
+          <div class="form-row">
+            <label>Name<input type="text" name="name" required autocomplete="name"></label>
+            <label>Phone<input type="tel" name="phone" required autocomplete="tel"></label>
+          </div>
+          <div class="form-row">
+            <label>Organization<input type="text" name="organization" autocomplete="organization"></label>
+            <label>Location<input type="text" name="location" autocomplete="address-level2"></label>
+          </div>
+          <label>Interested in<select name="interest" required>
+              <option value="">Select a solution</option>
+              <option>Furniture & Workspaces</option>
+              <option>Fire Safety</option>
+              <option>Water Purification</option>
+              <option>Institutional Infrastructure</option>
+              <option>Repair & Maintenance</option>
+            </select></label>
+          <label>Requirement<textarea name="message" rows="4" required
+              placeholder="Product, quantity, specifications or service details"></textarea></label>
+          <button class="button" type="submit"><i class="bi bi-whatsapp" aria-hidden="true"></i> Send request on
+            WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section product-detail-section">
+      <div class="shell">
+        <nav class="detail-breadcrumb"><a href="index.html">Home</a> / <a href="shop.html">Products</a> / <span
+            data-product-breadcrumb>Premium Executive Desk</span></nav>
+        <article class="product-detail ecommerce-product">
+          <div class="product-gallery">
+            <div class="product-detail-image"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"
+                data-product-image><span class="product-sale">Save 21%</span></div>
+            <div class="product-thumbnails"><button class="active" type="button"><img
+                  src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"></button><button
+                type="button"><img src="assets/Premium Executive Desk.jpg"
+                  alt="Premium Executive Desk side view"></button></div>
+          </div>
+          <div class="product-detail-copy">
+            <p class="eyebrow" data-product-category>Furniture · Workspace</p>
+            <h1 data-product-title>Premium Executive Desk</h1>
+            <div class="product-meta">
+              <a class="rating-summary" href="#reviews"><span class="stars" aria-hidden="true">★★★★★</span><strong>4.8</strong><span>(24 reviews)</span></a>
+              <span class="sku">SKU: <b data-product-sku>CMS-FUR-001</b></span>
+            </div>
+            <p data-product-description>Built for dependable everyday use in commercial and institutional environments.
+              A practical choice for executive cabins and professional workspaces.</p>
+            <div class="price-row"><strong data-product-price>₹14,999</strong><del data-product-old-price>₹18,999</del>
+            </div><small class="starting-label">Inclusive of taxes. Delivery charges may apply.</small><p class="stock-status"><i class="bi bi-check-circle-fill"></i> In stock and available for enquiry</p>
+            <form class="purchase-form" data-purchase-form>
+              <div class="variant-grid">
+                <fieldset><legend>Select size</legend><div class="variant-options"><label><input type="radio" name="size" value="Standard" checked><span>Standard</span></label><label><input type="radio" name="size" value="Large"><span>Large</span></label><label><input type="radio" name="size" value="Extra large"><span>XL</span></label></div></fieldset>
+                <fieldset><legend>Choose finish</legend><div class="variant-options"><label><input type="radio" name="finish" value="Walnut" checked><span>Walnut</span></label><label><input type="radio" name="finish" value="Oak"><span>Oak</span></label><label><input type="radio" name="finish" value="White"><span>White</span></label></div></fieldset>
+              </div>
+              <div class="quantity-wishlist-row"><label>Quantity<div class="quantity-control"><button
+                    type="button" data-quantity-minus aria-label="Reduce quantity">−</button><input type="number"
+                    min="1" value="1" data-product-quantity><button type="button" data-quantity-plus
+                    aria-label="Increase quantity">+</button></div></label><button class="product-wishlist-button" type="button" data-product-wishlist aria-pressed="false"><i class="bi bi-heart" aria-hidden="true"></i><span>Add to wishlist</span></button></div>
+              <div class="product-detail-actions"><button class="button add-cart" type="button" data-add-to-cart><i
+                    class="bi bi-cart3"></i> Add to cart</button><button class="buy-now" type="submit">Buy now</button>
+              </div>
+            </form>
+            <div class="trust-badges"><span><i class="bi bi-truck"></i><b>Reliable delivery</b><small>Careful dispatch support</small></span><span><i class="bi bi-arrow-repeat"></i><b>Easy returns</b><small>Simple assistance process</small></span><span><i class="bi bi-shield-check"></i><b>Quality checked</b><small>Commercial-grade sourcing</small></span><span><i class="bi bi-headset"></i><b>Expert support</b><small>Help before and after sale</small></span></div>
+          </div>
+        </article>
+        <section class="normal-product-details">
+          <div>
+            <h2>Product description</h2>
+            <p data-product-long-description>This product is made for dependable daily use and can be supplied in
+              suitable configurations for your requirement. Contact our team for specifications, bulk quantities,
+              delivery and installation support.</p>
+          </div>
+          <div>
+            <h2>Specifications</h2>
+            <dl>
+              <div>
+                <dt>Category</dt>
+                <dd data-product-spec-category>Furniture</dd>
+              </div>
+              <div>
+                <dt>Usage</dt>
+                <dd>Commercial &amp; institutional</dd>
+              </div>
+              <div>
+                <dt>Availability</dt>
+                <dd>On enquiry</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+        <section class="product-content-section faq-section">
+          <div class="content-heading"><div><p class="eyebrow">Need to know</p><h2>Frequently asked questions</h2></div></div>
+          <div class="faq-list"><details open><summary>Is this product available for bulk orders?<i class="bi bi-plus-lg"></i></summary><p>Yes. We supply commercial and institutional quantities. Contact us for volume pricing and delivery timelines.</p></details><details><summary>How long does delivery take?<i class="bi bi-plus-lg"></i></summary><p>Delivery depends on quantity, location and stock availability. We confirm the estimated date before finalizing the order.</p></details><details><summary>Are taxes and delivery included in the displayed price?<i class="bi bi-plus-lg"></i></summary><p>The displayed price is indicative. Final pricing, taxes and delivery charges are confirmed with your order.</p></details><details><summary>Can I ask for installation support?<i class="bi bi-plus-lg"></i></summary><p>Installation assistance is available for suitable products and locations.</p></details></div>
+        </section>
+        <section class="product-content-section reviews-section" id="reviews">
+          <div class="content-heading"><div><p class="eyebrow">Customer feedback</p><h2>Product reviews</h2></div></div>
+          <div class="reviews-layout"><div class="review-overview"><strong>4.8</strong><div><span class="stars">★★★★★</span><p>Based on 24 product reviews</p></div></div><div class="review-list"><article><div><span class="stars">★★★★★</span><time datetime="2026-07-18">18 July 2026</time></div><h3>Excellent quality and finish</h3><p>The product feels sturdy and professional. Delivery support was also helpful.</p><b>Verified customer</b></article><article><div><span class="stars">★★★★★</span><time datetime="2026-06-29">29 June 2026</time></div><h3>Great for our office</h3><p>Good value, clean finish and responsive support throughout the order.</p><b>Verified customer</b></article></div></div>
+        </section>
+        <section class="product-content-section">
+          <div class="content-heading"><div><p class="eyebrow">You may also like</p><h2>Related products</h2></div><a href="shop.html">View all products →</a></div>
+          <div class="product-card-grid"><a class="recommendation-card" href="product.html?product=chair"><div><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair" loading="lazy"></div><span>Furniture · Seating</span><h3>Ergonomic Mesh Chair</h3><p><strong>₹7,499</strong> <del>₹9,999</del></p><b>View product →</b></a><a class="recommendation-card" href="product.html?product=workstation"><div><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation" loading="lazy"></div><span>Furniture · Modular</span><h3>Modular Office Workstation</h3><p><strong>₹19,999</strong> <del>₹24,999</del></p><b>View product →</b></a><a class="recommendation-card" href="product.html?product=conference"><div><img src="assets/Conference Room Table.jpg" alt="Conference Room Table" loading="lazy"></div><span>Furniture · Boardroom</span><h3>Conference Room Table</h3><p><strong>₹26,999</strong> <del>₹32,999</del></p><b>View product →</b></a></div>
+        </section>
+        <section class="product-content-section recent-section">
+          <div class="content-heading"><div><p class="eyebrow">Continue browsing</p><h2>Recently viewed products</h2></div></div>
+          <div class="product-card-grid"><a class="recommendation-card" href="product.html?product=desk"><div><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk" loading="lazy"></div><span>Furniture · Workspace</span><h3>Premium Executive Desk</h3><p><strong>₹14,999</strong> <del>₹18,999</del></p><b>View product →</b></a><a class="recommendation-card" href="product.html?product=chair"><div><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair" loading="lazy"></div><span>Furniture · Seating</span><h3>Ergonomic Mesh Chair</h3><p><strong>₹7,499</strong> <del>₹9,999</del></p><b>View product →</b></a><a class="recommendation-card" href="product.html?product=workstation"><div><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation" loading="lazy"></div><span>Furniture · Modular</span><h3>Modular Office Workstation</h3><p><strong>₹19,999</strong> <del>₹24,999</del></p><b>View product →</b></a></div>
+        </section>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-footer" href="index.html" aria-label="Chanderiya home"><img
+            src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
+        <p>Reliable institutional products and services from Haridwar, Uttarakhand.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/chanderiyaMS" target="_blank" rel="noopener" aria-label="Facebook"><i
+              class="bi bi-facebook"></i></a>
+          <a href="https://in.linkedin.com/company/chanderiya-marketing-and-sales" target="_blank" rel="noopener"
+            aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.youtube.com/@cmschanderiya" target="_blank" rel="noopener" aria-label="YouTube"><i
+              class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/919027398484" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+              class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Navigate</h4><a href="about-us.html">About us</a><a href="shop.html">Products</a>
+        <a href="custom-products.html">Custom products</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Solutions</h4><a href="shop.html#furniture">Furniture</a><a href="shop.html#fire">Fire safety</a>
+        <a href="shop.html#water">Water purification</a><a href="shop.html#institutional">Institutional</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <a href="tel:+919027398484"><i class="bi bi-telephone"></i><span>+91 90273 98484</span></a>
+        <a href="mailto:chanderiya.group@gmail.com"><i
+            class="bi bi-envelope"></i><span>chanderiya.group@gmail.com</span></a>
+        <p><i class="bi bi-geo-alt"></i><span>170, First Floor, Brahampuri, Haridwar, Uttarakhand 249401</span></p>
+      </div>
+    </div>
+    <div class="shell footer-bottom footer-bottom-with-legal">
+      <span>© <span data-year></span> Chanderiya Marketing & Sales.</span>
+      <nav class="footer-legal-row" aria-label="Legal links">
+        <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a>
+        <a href="shipping.html">Shipping Policy</a><a href="refund.html">Cancellation & Refund</a>
+      </nav>
+      <span class="footer-integrity">Integrity · Quality · Accountability</span>
+    </div>
+  </footer>
+  <a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener"
+    aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/product.js"></script>
+</body>
+
 </html>

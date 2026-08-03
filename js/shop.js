@@ -1,84 +1,71 @@
-/* ==========================================
-   Product Filters
-========================================== */
-const filterButtons = document.querySelectorAll('[data-filter]');
-const productCards = document.querySelectorAll('.product-card');
-filterButtons.forEach(button => button.addEventListener('click', () => {
-    filterButtons.forEach(item => item.classList.remove('active'));
-    button.classList.add('active');
-    const filter = button.dataset.filter;
+/* Product cards are authored in shop.html. This script only filters those cards. */
+const filterForm = document.querySelector('[data-product-filters]');
+const categorySelect = document.querySelector('[data-category-filter]');
+const minimumPriceInput = document.querySelector('[data-min-price]');
+const maximumPriceInput = document.querySelector('[data-max-price]');
+const orderSelect = document.querySelector('[data-order-filter]');
+const productGrid = document.querySelector('.product-grid');
+const productCards = [...document.querySelectorAll('.product-card')];
+const filterSummary = document.querySelector('[data-filter-summary]');
+const catalogueTitle = document.querySelector('[data-catalogue-title]');
+const salesRanks = [91, 98, 94, 68, 82, 75, 71, 88, 77, 64, 80, 86];
+
+productCards.forEach((card, index) => {
+    card.dataset.sales = String(salesRanks[index]);
+});
+
+function applyFilters() {
+    const category = categorySelect.value;
+    const minimum = Number(minimumPriceInput.value) || 0;
+    const maximum = Number(maximumPriceInput.value) || Infinity;
+    let visible = 0;
+
     productCards.forEach(card => {
-        card.classList.toggle('hidden', filter !== 'all' && !card.dataset.category.includes(filter));
+        const matchesCategory = !category || card.dataset.category.split(' ').includes(category);
+        const price = Number(card.dataset.price);
+        const matchesPrice = price >= minimum && price <= maximum;
+        const showCard = matchesCategory && matchesPrice;
+        card.hidden = !showCard;
+        if (showCard) visible += 1;
     });
-}));
 
-/* ==========================================
-   Inquiry Cart
-========================================== */
-const cartStorageKey = 'chanderiya-inquiry';
-let shopCart = [];
-try { shopCart = JSON.parse(localStorage.getItem(cartStorageKey) || '[]'); } catch {}
+    filterSummary.textContent = visible === productCards.length
+        ? `Showing all ${productCards.length} products`
+        : `Showing ${visible} of ${productCards.length} products`;
 
-const drawer = document.querySelector('.cart-drawer');
-const cartItems = document.querySelector('[data-cart-items]');
-const cartEmpty = document.querySelector('[data-cart-empty]');
-const whatsappLink = document.querySelector('[data-cart-whatsapp]');
-const saveCart = () => {
-    localStorage.setItem(cartStorageKey, JSON.stringify(shopCart));
-    window.dispatchEvent(new Event('cart-updated'));
-};
-const renderCart = () => {
-    if (!cartItems) return;
-    cartItems.innerHTML = shopCart.map((item, index) =>
-        `<div class="cart-item"><span>${item}</span><button type="button" data-remove-item="${index}" aria-label="Remove ${item}">Remove</button></div>`
-    ).join('');
-    cartEmpty.hidden = shopCart.length > 0;
-    const message = `Hello Chanderiya Marketing & Sales,\n\nPlease share details and a quotation for:\n${shopCart.map(item => `• ${item}`).join('\n')}`;
-    whatsappLink.href = `https://wa.me/919027398484?text=${encodeURIComponent(message)}`;
-};
-const openCart = () => {
-    renderCart();
-    drawer?.classList.add('open');
-    drawer?.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('no-scroll');
-};
-const closeCart = () => {
-    drawer?.classList.remove('open');
-    drawer?.setAttribute('aria-hidden', 'true');
-    document.body.classList.remove('no-scroll');
-};
+    catalogueTitle.textContent = category
+        ? categorySelect.options[categorySelect.selectedIndex].text
+        : 'Products';
+}
 
-document.querySelectorAll('.cart-icon').forEach(button => button.addEventListener('click', event => {
+function sortProducts() {
+    const order = orderSelect.value;
+    const cards = [...productCards];
+    const byPrice = (first, second) => Number(first.dataset.price) - Number(second.dataset.price);
+    const byPopularity = (first, second) => Number(second.dataset.sales || 0) - Number(first.dataset.sales || 0);
+
+    if (order === 'price-low') cards.sort(byPrice);
+    if (order === 'price-high') cards.sort((first, second) => byPrice(second, first));
+    if (order === 'best-selling') cards.sort(byPopularity);
+    if (order === 'oldest') cards.reverse();
+    cards.forEach(card => productGrid.append(card));
+}
+
+filterForm?.addEventListener('submit', event => {
     event.preventDefault();
-    openCart();
-}));
-document.querySelectorAll('[data-cart-close]').forEach(button => button.addEventListener('click', closeCart));
-document.querySelectorAll('[data-add-item]').forEach(button => button.addEventListener('click', () => {
-    const item = button.dataset.addItem;
-    if (!shopCart.includes(item)) shopCart.push(item);
-    saveCart();
-    renderCart();
-    const original = button.textContent;
-    button.textContent = 'Added ✓';
-    button.classList.add('added');
-    setTimeout(() => {
-        button.textContent = original;
-        button.classList.remove('added');
-    }, 1500);
-}));
-cartItems?.addEventListener('click', event => {
-    const removeButton = event.target.closest('[data-remove-item]');
-    if (!removeButton) return;
-    shopCart.splice(Number(removeButton.dataset.removeItem), 1);
-    saveCart();
-    renderCart();
+    sortProducts();
+    applyFilters();
 });
-document.querySelector('[data-cart-clear]')?.addEventListener('click', () => {
-    shopCart = [];
-    saveCart();
-    renderCart();
+
+categorySelect?.addEventListener('change', () => {
+    catalogueTitle.textContent = categorySelect.value
+        ? categorySelect.options[categorySelect.selectedIndex].text
+        : 'Products';
 });
-document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeCart();
+
+filterForm?.addEventListener('reset', () => {
+    window.setTimeout(() => {
+        sortProducts();
+        applyFilters();
+    }, 0);
 });
-renderCart();
