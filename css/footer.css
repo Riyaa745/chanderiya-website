@@ -1,7 +1,7 @@
 /* ==========================================
    Footer - Desktop
 ========================================== */
-.site-footer{background:linear-gradient(135deg,#06172d 0%,#0a3150 55%,#07555c 100%);color:#a8b8ca;padding:70px 0 25px}
+.site-footer{background:radial-gradient(circle at 88% 12%,rgba(255,92,112,.24) 0,transparent 34%),linear-gradient(135deg,#0b2f78 0%,#173f91 46%,#b51f3c 100%);color:#eef3ff;padding:70px 0 25px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1.25fr 1.5fr;gap:55px}
 .footer-brand .brand-footer{display:inline-flex;color:#fff;margin-bottom:18px}
 .footer-brand .brand-footer img{width:130px;height:130px;object-fit:contain;border-radius:12px}
@@ -12,12 +12,12 @@
 .footer-social{display:flex;gap:9px;margin-top:22px}
 .footer-social a{width:39px;height:39px;background:var(--red);color:#fff;border-radius:50%;display:grid;place-items:center;transition:.2s}
 .footer-social a:hover{background:var(--blue);color:#fff;transform:translateY(-2px)}
-.footer-contact a,.footer-contact p{display:flex;flex-direction:row;align-items:flex-start;gap:10px}
+.footer-contact a,.footer-contact p{display:flex;flex-direction:row;align-items:center;gap:10px}
 .footer-contact .bi{color:var(--red);font-size:18px;flex:0 0 auto;margin-top:3px}
 .footer-contact a:hover .bi{color:#fff}
 .footer-contact span{overflow-wrap:anywhere}
-.footer-bottom{margin-top:50px;border-top:1px solid #29435e;padding-top:22px;font-size:.78rem}
-.footer-bottom-with-legal{display:grid;grid-template-columns:minmax(210px,1fr) auto minmax(210px,1fr);align-items:center;gap:24px}
+.footer-bottom{margin-top:50px;border-top:1px solid rgba(255,255,255,.28);padding-top:22px;font-size:.78rem}
+.footer-bottom-with-legal{display:grid;grid-template-columns:minmax(210px,1fr) auto;align-items:center;gap:24px}
 .footer-legal-row{display:flex;justify-content:center;gap:12px 22px;flex-wrap:nowrap;white-space:nowrap}
 .footer-legal-row a:hover{color:#fff}
 .footer-integrity{text-align:right}
