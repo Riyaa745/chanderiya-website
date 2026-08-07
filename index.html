@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -36,7 +37,7 @@
 </div>
 <header class="site-header">
   <div class="mobile-header">
-    <a class="mobile-logo" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo-removebg-preview.png" alt="Chanderiya Marketing and Sales"></a>
+    <a class="mobile-logo" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo-removebg-preview.jpeg" alt="Chanderiya Marketing and Sales"></a>
     <div class="mobile-header-actions" aria-label="Mobile quick links">
       <a class="header-icon" href="#product-search" data-search-open aria-label="Search products" title="Search"><i class="bi bi-search"></i></a>
       <a class="header-icon wishlist-icon" href="wishlist.html" aria-label="View wishlist" title="Wishlist"><i class="bi bi-heart"></i><span data-wishlist-count-header>0</span></a>
@@ -51,7 +52,7 @@
     </nav>
   </div>
   <div class="shell nav-wrap">
-    <a class="brand" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo-removebg-preview.png" alt="Chanderiya Marketing and Sales"></a>
+    <a class="brand" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo-removebg-preview.jpeg" alt="Chanderiya Marketing and Sales"></a>
     <nav class="main-nav" aria-label="Primary navigation">
       <a href="index.html">Home</a><a href="about-us.html">About</a><a href="shop.html">Online Product</a>
       <a href="custom-products.html">Products</a><a href="services.html">Services</a><a href="contact.html">Contact</a>
@@ -121,7 +122,7 @@
       <button class="slider-arrow slider-prev" type="button" data-slider-prev
         aria-label="Previous slide">&#8249;</button>
       <button class="slider-arrow slider-next" type="button" data-slider-next aria-label="Next slide">&#8250;</button>
-      <div class="slider-dots" aria-label="Choose slide"><button class="active" type="button" data-slide="0"
+      <div class="slider-dots d-flex" aria-label="Choose slide"><button class="active" type="button" data-slide="0"
           aria-label="Show slide 1"></button><button type="button" data-slide="1"
           aria-label="Show slide 2"></button><button type="button" data-slide="2"
           aria-label="Show slide 3"></button><button type="button" data-slide="3" aria-label="Show slide 4"></button>
@@ -136,13 +137,13 @@
     </section>
     <section class="section category-section visual-categories" id="categories">
       <div class="shell">
-        <div class="section-heading">
+        <div class="section-heading d-flex">
           <div>
             <p class="eyebrow">Our categories</p>
             <h2>One Partner. Multiple<br>Essential Solutions.</h2>
           </div><a class="text-link category-view-all" href="shop.html">View all categories <span>→</span></a>
         </div>
-        <div class="category-grid visual-category-grid">
+        <div class="category-grid visual-category-grid d-grid">
           <a class="visual-category-card furniture-category" href="shop.html#furniture">
             <div class="category-copy"><span class="category-icon">♜</span>
               <h3>Furniture & Workspaces</h3>
@@ -181,13 +182,13 @@
     <section class="hero reliable-supply-section">
       <div class="hero-orb orb-one"></div>
       <div class="hero-orb orb-two"></div>
-      <div class="shell hero-grid">
+      <div class="shell hero-grid d-grid">
         <div class="hero-copy reveal">
           <p class="eyebrow">Reliable supply. Responsive service.</p>
           <h1>Infrastructure that keeps your institution moving.</h1>
-          <div class="hero-actions"><a class="button" href="shop.html">Explore products</a><a class="text-link"
+          <div class="hero-actions d-flex"><a class="button" href="shop.html">Explore products</a><a class="text-link"
               href="contact.html#quote">Discuss your requirement <span>→</span></a></div>
-          <div class="trust-row">
+          <div class="trust-row d-flex">
             <div><strong>13+</strong><span>Years of experience</span></div>
             <div><strong>GeM</strong><span>Registered seller</span></div>
             <div><strong>Make in India</strong></div>
@@ -214,20 +215,20 @@
     </section>
     <section class="section featured-products">
       <div class="shell">
-        <div class="section-heading">
+        <div class="section-heading d-flex">
           <div>
             <p class="eyebrow">Featured catalogue</p>
             <h2>Products built for everyday performance.</h2>
           </div><a class="text-link" href="shop.html">Shop all products <span>→</span></a>
         </div>
-        <div class="commerce-grid home-commerce-grid" id="featured-products">
+        <div class="commerce-grid home-commerce-grid d-grid" id="featured-products">
           <article class="commerce-card">
             <div class="commerce-image"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"><span class="save-badge">Save 21%</span>
               <div class="card-actions"><button type="button" class="wishlist-button" aria-label="Add Premium Executive Desk to wishlist"><i class="bi bi-heart"></i></button><a href="product.html" aria-label="View Premium Executive Desk"><i class="bi bi-eye"></i></a></div>
             </div>
             <div class="commerce-body"><span class="product-category">Furniture · Workspace</span>
               <h3><a href="product.html">Premium Executive Desk</a></h3>
-              <div class="price-row"><strong>₹14,999</strong><del>₹18,999</del></div><button class="add-cart-button"
+              <div class="price-row d-flex"><strong>₹14,999</strong><del>₹18,999</del></div><button class="add-cart-button"
                 type="button" data-add-item="Premium Executive Desk">Add to inquiry cart</button>
             </div>
           </article>
@@ -237,7 +238,7 @@
             </div>
             <div class="commerce-body"><span class="product-category">Furniture · Seating</span>
               <h3><a href="shop.html">Ergonomic Mesh Chair</a></h3>
-              <div class="price-row"><strong>₹7,499</strong><del>₹9,999</del></div><button class="add-cart-button"
+              <div class="price-row d-flex"><strong>₹7,499</strong><del>₹9,999</del></div><button class="add-cart-button"
                 type="button" data-add-item="Ergonomic Mesh Chair">Add to inquiry cart</button>
             </div>
           </article>
@@ -248,7 +249,7 @@
             </div>
             <div class="commerce-body"><span class="product-category">Furniture · Modular</span>
               <h3><a href="shop.html">Modular Office Workstation</a></h3>
-              <div class="price-row"><strong>₹19,999</strong><del>₹24,999</del></div><button class="add-cart-button"
+              <div class="price-row d-flex"><strong>₹19,999</strong><del>₹24,999</del></div><button class="add-cart-button"
                 type="button" data-add-item="Modular Office Workstation">Add to inquiry cart</button>
             </div>
           </article>
@@ -258,7 +259,7 @@
             </div>
             <div class="commerce-body"><span class="product-category">Furniture · Boardroom</span>
               <h3><a href="shop.html">Conference Room Table</a></h3>
-              <div class="price-row"><strong>₹26,999</strong><del>₹32,999</del></div><button class="add-cart-button"
+              <div class="price-row d-flex"><strong>₹26,999</strong><del>₹32,999</del></div><button class="add-cart-button"
                 type="button" data-add-item="Conference Room Table">Add to inquiry cart</button>
             </div>
           </article>
@@ -268,7 +269,7 @@
       </div>
     </section>
     <section class="section image-story">
-      <div class="shell split-layout">
+      <div class="shell split-layout d-grid">
         <div class="story-images reveal"><img class="story-main certified-trust-image"
             src="assets/certified fire-fighting.png"
             alt="Certified fire fighting, workspace and water purification solutions">
@@ -290,16 +291,16 @@
       </div>
     </section>
     <section class="section presence-section">
-      <div class="shell presence-layout">
+      <div class="shell presence-layout d-grid">
         <div class="presence-intro">
           <p class="eyebrow">Our presence</p>
           <h2>Our Presence<br><span>Across India</span></h2>
           <p>Delivering reliable solutions.<br>Building stronger communities.</p>
         </div>
-        <div class="presence-groups">
+        <div class="presence-groups d-grid">
           <div class="presence-group">
             <h3>Our Presence</h3>
-            <div class="location-grid">
+            <div class="location-grid d-grid">
               <span><i class="bi bi-geo-alt-fill"></i>Haridwar</span>
               <span><i class="bi bi-geo-alt-fill"></i>Dehradun</span>
               <span><i class="bi bi-geo-alt-fill"></i>Rishikesh</span>
@@ -311,7 +312,7 @@
           </div>
           <div class="presence-group regional-hubs">
             <h3>Regional Hubs</h3>
-            <div class="location-grid">
+            <div class="location-grid d-grid">
               <span><i class="bi bi-geo-alt-fill"></i>Delhi</span>
               <span><i class="bi bi-geo-alt-fill"></i>Chandigarh</span>
               <span><i class="bi bi-geo-alt-fill"></i>Mohali</span>
@@ -327,8 +328,8 @@
         <p>Trusted by institutions, enterprises, banks and organizations across India.</p>
       </div>
       <div class="customer-marquee" data-customer-marquee>
-        <div class="customer-logo-track">
-          <div class="customer-logo-group">
+        <div class="customer-logo-track d-flex">
+          <div class="customer-logo-group d-flex">
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.48 AM.jpeg" alt="Customer logo 1" loading="lazy"></div>
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.49 AM.jpeg" alt="Customer logo 2" loading="lazy"></div>
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.50 AM (1).jpeg" alt="Customer logo 3" loading="lazy"></div>
@@ -355,7 +356,7 @@
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.04.06 AM.jpeg" alt="Customer logo 24" loading="lazy"></div>
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.04.07 AM.jpeg" alt="Customer logo 25" loading="lazy"></div>
           </div>
-          <div class="customer-logo-group" aria-hidden="true">
+          <div class="customer-logo-group d-flex" aria-hidden="true">
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.48 AM.jpeg" alt="" loading="lazy"></div>
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.49 AM.jpeg" alt="" loading="lazy"></div>
             <div class="customer-logo-card"><img src="assets/customer logo/WhatsApp Image 2026-07-21 at 11.03.50 AM (1).jpeg" alt="" loading="lazy"></div>
@@ -385,16 +386,16 @@
         </div>
       </div>
     </section>
-    <section class="section services-preview">
+    <section class="section services-preview position-relative overflow-hidden">
       <div class="shell">
-        <div class="section-heading light">
+        <div class="section-heading light d-flex">
           <div>
             <p class="eyebrow">Beyond the sale</p>
             <h2>Service that extends product life.</h2>
           </div>
           <p>Preventive care, repairs and expert support that keep your essential equipment performing reliably.</p>
         </div>
-        <div class="service-grid home-service-grid">
+        <div class="service-grid home-service-grid d-grid">
           <article><span class="service-card-icon" aria-hidden="true">⌑</span>
             <h3>Furniture repair</h3>
             <p>Chair, desk, cabinet, hardware and wooden furniture restoration.</p><a href="services.html">View service
@@ -414,22 +415,22 @@
       </div>
     </section>
     <section class="section cta-section">
-      <div class="shell cta-box">
+      <div class="shell cta-box d-flex">
         <div>
           <p class="eyebrow">Have a project in mind?</p>
           <h2>Tell us what your space needs.</h2>
           <p>Our team will help identify a suitable, practical solution for your institution.</p>
         </div>
-        <div class="cta-actions"><a class="button" href="contact.html#quote">Request a quote</a></div>
+        <div class="cta-actions d-flex"><a class="button" href="contact.html#quote">Request a quote</a></div>
       </div>
     </section>
   </main>
   <footer class="site-footer">
-  <div class="shell footer-grid">
+  <div class="shell footer-grid d-grid">
     <div class="footer-brand">
-      <a class="brand brand-footer" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo.jpeg" alt="Chanderiya Marketing and Sales"></a>
+      <a class="brand brand-footer" href="index.html" aria-label="Chanderiya home"><img src="assets/chanderiya-logo-removebg-preview.jpeg" alt="Chanderiya Marketing and Sales"></a>
       <p>Integrity · Quality · Accountability</p>
-      <div class="footer-social">
+      <div class="footer-social d-flex">
         <a href="https://www.facebook.com/chanderiyaMS" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://in.linkedin.com/company/chanderiya-marketing-and-sales" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
         <a href="https://www.youtube.com/@cmschanderiya" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
@@ -444,16 +445,16 @@
       <h4>Solutions</h4><a href="shop.html#furniture">Furniture</a><a href="shop.html#fire">Fire safety</a>
       <a href="shop.html#water">Water purification</a><a href="shop.html#institutional">Institutional</a>
     </div>
-    <div class="footer-contact">
+    <div class="footer-contact d-flex">
       <h4>Contact</h4>
       <a href="tel:+919027398484"><i class="bi bi-telephone"></i><span>+91 90273 98484</span></a>
       <a href="mailto:chanderiya.group@gmail.com"><i class="bi bi-envelope"></i><span>chanderiya.group@gmail.com</span></a>
       <p><i class="bi bi-geo-alt"></i><span>170, First Floor, Brahampuri, Haridwar, Uttarakhand 249401</span></p>
     </div>
   </div>
-  <div class="shell footer-bottom footer-bottom-with-legal">
+  <div class="shell footer-bottom footer-bottom-with-legal d-grid">
     <span>© <span data-year></span> Chanderiya Marketing & Sales.</span>
-    <nav class="footer-legal-row" aria-label="Legal links">
+    <nav class="footer-legal-row d-flex" aria-label="Legal links">
       <a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms & Conditions</a>
       <a href="shipping.html">Shipping Policy</a><a href="refund.html">Cancellation & Refund</a>
     </nav>
@@ -461,6 +462,6 @@
   </div>
 </footer>
   <a class="whatsapp-fab" href="https://wa.me/919027398484" target="_blank" rel="noopener"
-    aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a><div class="product-search-popup" id="product-search" data-search-popup hidden><button class="search-popup-backdrop" type="button" data-search-close aria-label="Close search"></button><section class="search-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="search-popup-title"><div class="search-popup-top"><div><p class="eyebrow">Search catalogue</p><h2 id="search-popup-title">Find your product</h2></div><button class="search-popup-close" type="button" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><form class="popup-search-form" role="search" data-popup-search-form><i class="bi bi-search"></i><input type="search" data-popup-search-input placeholder="Search desks, chairs, furniture..." aria-label="Search products"></form><p class="popup-search-label">Products</p><div class="popup-search-results"><a class="popup-search-product" href="product.html?product=desk" data-popup-search-product data-search-text="premium executive desk office workspace furniture"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"><span><small>Furniture</small><b>Premium Executive Desk</b></span><strong>₹14,999</strong></a><a class="popup-search-product" href="product.html?product=chair" data-popup-search-product data-search-text="ergonomic mesh chair seating office furniture"><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair"><span><small>Seating</small><b>Ergonomic Mesh Chair</b></span><strong>₹7,499</strong></a><a class="popup-search-product" href="product.html?product=workstation" data-popup-search-product data-search-text="modular office workstation team furniture"><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation"><span><small>Furniture</small><b>Modular Office Workstation</b></span><strong>₹19,999</strong></a><a class="popup-search-product" href="product.html?product=conference" data-popup-search-product data-search-text="conference room table boardroom meeting furniture"><img src="assets/Conference Room Table.jpg" alt="Conference Room Table"><span><small>Boardroom</small><b>Conference Room Table</b></span><strong>₹26,999</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="abc fire extinguisher fire safety"><img src="assets/ABC Fire Extinguisher.jpg" alt="ABC Fire Extinguisher"><span><small>Fire safety</small><b>ABC Fire Extinguisher</b></span><strong>Enquire</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="commercial ro system water purification"><img src="assets/Commercial RO System.jpg" alt="Commercial RO System"><span><small>Water systems</small><b>Commercial RO System</b></span><strong>Enquire</strong></a></div><div class="popup-search-empty" data-popup-search-empty hidden><i class="bi bi-search"></i><b>No matching products found</b><p>Try another product name or browse the full catalogue.</p></div></section></div><script src="js/header.js"></script><script src="js/footer.js"></script><script src="js/index.js"></script></body>
+    aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a><div class="product-search-popup" id="product-search" data-search-popup hidden><button class="search-popup-backdrop" type="button" data-search-close aria-label="Close search"></button><section class="search-popup-dialog" role="dialog" aria-modal="true" aria-labelledby="search-popup-title"><div class="search-popup-top d-flex"><div><p class="eyebrow">Search catalogue</p><h2 id="search-popup-title">Find your product</h2></div><button class="search-popup-close" type="button" data-search-close aria-label="Close search"><i class="bi bi-x-lg"></i></button></div><form class="popup-search-form" role="search" data-popup-search-form><i class="bi bi-search"></i><input type="search" data-popup-search-input placeholder="Search desks, chairs, furniture..." aria-label="Search products"></form><p class="popup-search-label">Products</p><div class="popup-search-results"><a class="popup-search-product" href="product.html?product=desk" data-popup-search-product data-search-text="premium executive desk office workspace furniture"><img src="assets/Premium Executive Desk.jpg" alt="Premium Executive Desk"><span><small>Furniture</small><b>Premium Executive Desk</b></span><strong>₹14,999</strong></a><a class="popup-search-product" href="product.html?product=chair" data-popup-search-product data-search-text="ergonomic mesh chair seating office furniture"><img src="assets/Ergonomic Mesh Chair.jpg" alt="Ergonomic Mesh Chair"><span><small>Seating</small><b>Ergonomic Mesh Chair</b></span><strong>₹7,499</strong></a><a class="popup-search-product" href="product.html?product=workstation" data-popup-search-product data-search-text="modular office workstation team furniture"><img src="assets/modular-office-workstation.jpg" alt="Modular Office Workstation"><span><small>Furniture</small><b>Modular Office Workstation</b></span><strong>₹19,999</strong></a><a class="popup-search-product" href="product.html?product=conference" data-popup-search-product data-search-text="conference room table boardroom meeting furniture"><img src="assets/Conference Room Table.jpg" alt="Conference Room Table"><span><small>Boardroom</small><b>Conference Room Table</b></span><strong>₹26,999</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="abc fire extinguisher fire safety"><img src="assets/ABC Fire Extinguisher.jpg" alt="ABC Fire Extinguisher"><span><small>Fire safety</small><b>ABC Fire Extinguisher</b></span><strong>Enquire</strong></a><a class="popup-search-product" href="shop.html" data-popup-search-product data-search-text="commercial ro system water purification"><img src="assets/Commercial RO System.jpg" alt="Commercial RO System"><span><small>Water systems</small><b>Commercial RO System</b></span><strong>Enquire</strong></a></div><div class="popup-search-empty" data-popup-search-empty hidden><i class="bi bi-search"></i><b>No matching products found</b><p>Try another product name or browse the full catalogue.</p></div></section></div><script src="js/header.js"></script><script src="js/footer.js"></script><script src="js/index.js"></script></body>
 
 </html>
